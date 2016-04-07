@@ -1,6 +1,7 @@
-# Genero Web Client - JavaScript theme (GWC-JS) project
-
+# Genero Web Client - JavaScript (GWC-JS)
 [![Build Status](https://travis-ci.org/Hafidzi/gws-js.svg)](https://travis-ci.org/hafidzi/gws-js)
+
+![Genero Logo](http://4js.com/wp-content/uploads/2015/05/logo_4Js_2014_CMYK_seul-300x92.png)
 
 ## Requirements
 
