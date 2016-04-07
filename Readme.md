@@ -1,7 +1,10 @@
 # Genero Web Client - JavaScript (GWC-JS)
 [![Build Status](https://travis-ci.org/Hafidzi/gws-js.svg)](https://travis-ci.org/hafidzi/gws-js)
 
-![Genero Logo](http://4js.com/wp-content/uploads/2015/05/logo_4Js_2014_CMYK_seul-300x92.png)
+
+![Genero Enterprise](http://4js.com/wp-content/uploads/2015/06/genero_enterprise_800x256-300x96.png)
+
+![Genero](http://4js.com/wp-content/uploads/2015/06/Cross-platform-architecture.png)
 
 ## Requirements
 
