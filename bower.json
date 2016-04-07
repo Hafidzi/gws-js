@@ -1,0 +1,29 @@
+{
+  "name": "sample",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "~4.0.4",
+    "javascript-state-machine": "~2.3.5",
+    "jquery": "~2.1.4",
+    "jquery-mousewheel": "~3.1.13",
+    "jsface": "~2.4.9",
+    "mdi": "~1.2.65",
+    "moment": "~2.10.6",
+    "mousetrap": "~1.5.3",
+    "nicescroll": "~3.6.0",
+    "node-uuid": "~1.4.3",
+    "pikaday-time": "~1.3.3",
+    "sugar": "~1.4.1",
+    "stacktrace-js": "~1.0.1",
+    "i18next": "~1.11.1"
+  }
+}

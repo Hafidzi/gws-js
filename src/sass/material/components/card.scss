@@ -1,0 +1,60 @@
+.mt-card {
+  display: flex;
+  flex-direction: column;
+  .mt-card-texthead {
+    padding: 8px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+    border-bottom: solid 1px $text-dark-12;
+    &.mt-card-texthead-small {
+      font-size:12px;
+      line-height: 12px;
+    }
+    &.mt-card-texthead-hidden {
+      display: none;
+    }
+  }
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.40);
+  border-radius: 3px;
+  .mt-card-richhead {
+    height: 180px;
+    position: relative;
+    border-bottom: solid 1px $text-dark-12;
+    .mt-card-header-text {
+      font-size: 32px;
+      line-height: 32px;
+    }
+    .mt-card-header-rightpic{
+        font-size: 160px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        opacity: 0.1;
+    }
+  }
+  .mt-card-body {
+    padding: 16px;
+    .mt-actions {
+      list-style: none;
+      .mt-action {
+        height: 48px;
+        line-height: 48px;
+        font-size: 14px;
+      }
+    }
+    &.mt-card-body-fill  {
+      @include flexible_guest_stretch;
+      overflow: auto;
+    }
+  }
+  .mt-card-actions {
+    height: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-top: solid 1px $text-dark-12;
+    .mt-button-flat {
+      margin-top: 6px;
+    }
+  }
+}

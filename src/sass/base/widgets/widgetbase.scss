@@ -1,0 +1,50 @@
+.gbc_WidgetBase {
+  will-change:all;
+  input, textarea {
+    will-change:all;
+  }
+  &:focus{
+    outline:none;
+  }
+  &.gbc_WidgetBase_defaultwidth {
+    width: 120px;
+  }
+  &.gbc_WidgetBase_autoheight {
+    width: auto;
+  }
+  .gbc_FormWidget &.g_measuring {
+    display: inline-flex;
+    //width:auto !important;
+    //height:auto !important;
+  }
+}
+
+.gbc_HLineWidget {
+  border-top: 1px solid $gbc-separator-color;
+}
+
+.measureHelper {
+  border:0 !important;
+  margin:0 !important;
+  padding: 0 !important;
+  width:1em !important;
+  height:1em !important;
+  min-width:1em !important;
+  min-height:1em !important;
+  max-width:1em !important;
+  max-height:1em !important;
+  display: inline-block !important;
+  flex:0 0 auto !important;
+}
+
+
+.widget-decoration{
+  color: $text-dark-100;
+  &:hover{
+    cursor: pointer;
+  }
+  .disabled &:hover{
+    cursor: inherit;
+  }
+
+}

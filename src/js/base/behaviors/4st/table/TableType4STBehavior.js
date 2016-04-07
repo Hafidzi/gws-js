@@ -1,0 +1,61 @@
+/// FOURJS_START_COPYRIGHT(D,2015)
+/// Property of Four Js*
+/// (c) Copyright Four Js 2015, 2015. All Rights Reserved.
+/// * Trademark of Four Js Development Tools Europe Ltd
+///   in the United States and elsewhere
+///
+/// This file can be modified by licensees according to the
+/// product manual.
+/// FOURJS_END_COPYRIGHT
+
+"use strict";
+
+modulum('TableType4STBehavior', ['StyleBehaviorBase'],
+  /**
+   * @param {gbc} context
+   * @param {classes} cls
+   */
+  function(context, cls) {
+    /**
+     * @class classes.TableType4STBehavior
+     * @extends classes.BehaviorBase
+     */
+    cls.TableType4STBehavior = context.oo.Class(cls.StyleBehaviorBase, function($super) {
+      /** @lends classes.TableType4STBehavior.prototype */
+      return {
+        __name: "TableType4STBehavior",
+        /** @type {classes.NodeBase} */
+        _tableNode: null,
+
+        /**
+         * @constructs {classes.TableType4STBehavior}
+         * @param {classes.ControllerBase} controller
+         * @param {classes.NodeBase} tableNode
+         */
+        constructor: function(controller, tableNode) {
+          $super.constructor.call(this, controller);
+          this._tableNode = tableNode;
+        },
+        /**
+         *
+         */
+        _apply: function() {
+          var widget = this._controller.getWidget();
+          var tableType = this._tableNode.getStyleAttribute("tableType");
+          if (widget && widget.setFrozenTable) {
+            widget.setFrozenTable(tableType === "frozenTable");
+          } else {
+            this._failed("Could not apply behavior");
+          }
+        },
+
+        /**
+         *
+         */
+        destroy: function() {
+          this._tableNode = null;
+          $super.destroy.call(this);
+        }
+      };
+    });
+  });

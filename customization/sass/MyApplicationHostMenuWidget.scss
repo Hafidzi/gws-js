@@ -1,0 +1,33 @@
+$my-ApplicationHostMenuWidget-height: 32px;
+
+.gbc_MyApplicationHostMenuWidget {
+  height: $my-ApplicationHostMenuWidget-height;
+
+  > .mt-title {
+    text-align: center;
+    line-height: $my-ApplicationHostMenuWidget-height;
+  }
+
+  .mt-actions {
+    line-height: $my-ApplicationHostMenuWidget-height;
+  }
+
+  > ul {
+    display: flex;
+  }
+
+  .gbc_ImageWidget {
+    display: inline-block;
+    margin-right: 10px;
+    width: $my-ApplicationHostMenuWidget-height;
+    height: $my-ApplicationHostMenuWidget-height;
+
+    > img, svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.mt-maincontainer .mt-sidebar .mt-sidebar-content .mt-title {
+  height: $my-ApplicationHostMenuWidget-height;
+}

@@ -1,0 +1,20 @@
+.gbc_ToolBarWidget {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  &.mt-toolbar {
+    background-color: transparent;
+    box-shadow: none;
+    color: inherit;
+  }
+  & > .mt-separator{
+    margin: 8px 4px;
+    border-left: 1px solid $gbc-separator-color;
+  }
+
+  &.buttonTextHidden .gbc_ToolBarItemWidget > span{
+    display: none;
+  }
+
+}

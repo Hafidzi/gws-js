@@ -1,0 +1,12 @@
+.gbc_EditWidget {
+  &.g_measured {
+    width:100%;
+  }
+
+  input {
+    font-family:inherit;
+    flex:1 1 auto;
+    min-width:0;
+    box-shadow: none;
+  }
+}

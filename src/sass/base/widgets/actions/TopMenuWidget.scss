@@ -1,0 +1,72 @@
+$gbc-TopMenu-hover-color: $gbc-primary-light-color;
+
+.gbc_TopMenuWidget {
+  display: flex;
+  list-style: none;
+  line-height: 24px;
+
+  .gbc_TopMenuGroupWidget {
+    padding: 6px 16px;
+
+    &:not(.disabled):hover {
+      cursor: pointer;
+      background-color: $gbc-TopMenu-hover-color;
+    }
+
+    .gbc_ImageWidget {
+      display:inline-block;
+      margin-right: 8px;
+      &.gbc_autoScale {
+        width: 16px !important;
+        height: 16px !important;
+      }
+    }
+  }
+}
+
+/* concerns element in DropDown */
+.gbc_DropDownContainerWidget{
+  .divider {
+    margin: 4px 12px;
+    border-top: 1px solid $gbc-separator-color;
+    min-height: 1px;
+    &:not(.disabled):hover{
+      cursor:default;
+      background-color: inherit;
+    }
+  }
+
+  .gbc_TopMenuGroupWidget, .gbc_TopMenuCommandWidget {
+    padding: 4px 16px;
+
+    .gbc_ImageWidget{
+      display:inline-block;
+      margin-right: 8px;
+
+      &.gbc_autoScale {
+        width: 16px !important;
+        height: 16px !important;
+      }
+    }
+  }
+
+  .gbc_TopMenuGroupWidget {
+    .gbc_ImageWidget.hidden + .topMenuGroupText {
+      padding-left: 24px;
+    }
+
+    .topMenuGroupCaret{
+      margin-left:8px;
+      @extend .caret-right;
+    }
+  }
+
+  .gbc_TopMenuCommandWidget{
+    a{
+      color:inherit;
+      /*padding-right: 24px; // For symmetry with the image*/
+    }
+  }
+}
+
+

@@ -1,0 +1,15 @@
+{{#each .}}
+  <tr onclick="$('.cat_{{name}}').toggle();window.__auiview = window.__auiview || {}; window.__auiview['.cat_{{name}}']=!window.__auiview['.cat_{{name}}'];">
+    <td colspan="5" class="category">{{name}}</td>
+  </tr>
+  {{#each properties}}
+    <tr class="property cat_{{../name}} {{#if notDefault}}changed{{/if}}">
+      <td> </td>
+      <td>{{key}}</td>
+      <td>{{ifnull value default}}</td>
+      <td>{{underscored}}</td>
+      <td>{{default}}</td>
+    </tr>
+  {{/each}}
+  <script>if (window.__auiview&&window.__auiview['.cat_{{name}}'])$('.cat_{{name}}').toggle();</script>
+{{/each}}

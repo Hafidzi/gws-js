@@ -1,0 +1,48 @@
+$gbc-Splitter-hover-color: lighten($gbc-separator-color, 15%);
+
+.gbc_SplitterWidget{
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  >i{
+    flex: 0 0 auto;
+    font-size: 12px;
+  }
+  >.firefox_placekeeper {
+    color:rgba(255,255,255, 0.01);
+    pointer-events: none;
+  }
+  &.canSplit:hover {
+    background: $gbc-Splitter-hover-color;
+  }
+  .gbc_HBoxWidget > .g_BoxElement > &{
+    flex-direction: row;
+    height:100%;
+    min-height:1px;
+    width:$splitter-size;
+    min-width:$splitter-size;
+    max-width:$splitter-size;
+
+    &.canSplit {
+      cursor:ew-resize;
+      >i {
+        @extend .zmdi-drag-vertical;
+      }
+    }
+  }
+  .gbc_VBoxWidget > .g_BoxElement > &{
+    flex-direction: column;
+    width:100%;
+    min-width:1px;
+    height:$splitter-size;
+    min-height:$splitter-size;
+    max-height:$splitter-size;
+
+    &.canSplit {
+      cursor:ns-resize;
+      >i {
+        @extend .zmdi-drag-horizontal;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.gbc_MyMainContainerWidget {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  > header {
+    padding: 1em;
+    background-color: $mt-green-300;
+    color: white;
+    text-align: center;
+  }
+  > .containerElement {
+    flex: 1 1 0;
+    position: relative;
+  }
+  > footer {
+    padding: 1em;
+    background-color: $mt-green-300;
+    color: white;
+    text-align: center;
+  }
+}

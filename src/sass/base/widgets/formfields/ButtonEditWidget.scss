@@ -1,0 +1,43 @@
+.gbc_ButtonEditWidget, .gbc_DummyButtonEditWidget {
+  display: flex;
+  .gbc_FormWidget &.gbc_WidgetBase.g_measuring {
+    display: inline-flex;
+
+    .gbc_dataContentPlaceholder:not(.gbc_dynamicMeasure) {
+      > :not(.gbc_dataContentMeasure) {
+        display: none;
+      }
+      > .gbc_dataContentMeasure {
+        display: inline-flex;
+      }
+    }
+    .gbc_dataContentPlaceholder.gbc_dynamicMeasure {
+      > .gbc_dataContentMeasure {
+        display: none;
+      }
+    }
+    .gbc_dataContentPlaceholder {
+      > .gbc_dataContentMeasure {
+        display: none;
+      }
+    }
+  }
+
+  &.gbc_Focus .gbc_EditWidget{
+    border:none;
+    outline: none;
+    border-bottom: solid 2px $gbc-primary-medium-color;
+    box-shadow: inset 0 1px 4px rgba(0,0,0,.24), inset 0 1px 1px rgba(0,0,0,.24);
+  }
+  &.g_measured {
+    .gbc_EditWidget {
+      flex: 1 1 0px;
+    }
+  }
+  .mt-button {
+    min-width:$field-default-height;
+  }
+  .gbc_ButtonWidget {
+    padding: 0 0 0 4px;
+  }
+}

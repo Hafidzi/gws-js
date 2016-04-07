@@ -1,0 +1,23 @@
+.gbc_MessageWidget{
+  &.hidden {
+    display: inline-block !important;
+    transform: translateY(100px);
+  }
+
+  z-index: $z-index-Message;
+  display: inline-block;
+  position: fixed;
+  background: $gbc-message-color;
+  color: $text-light-87;
+  min-height: 48px;
+  min-width: 288px;
+  padding: 16px 24px 12px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px 0 $text-dark-26;
+  border-radius: 2px;
+  bottom: 12px;
+  right: 12px;
+  font-size: 14px;
+  cursor: default;
+  transition: visibility 0.3s, transform 0.3s;
+}

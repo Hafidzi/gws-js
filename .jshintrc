@@ -1,0 +1,34 @@
+{
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "freeze": true,
+  "immed": true,
+  "latedef": true,
+  "noarg": true,
+  "noempty": true,
+  "nonbsp": true,
+  "nonew": true,
+  "undef": true,
+  "unused": false,
+  "strict": true,
+  "trailing": true,
+  "maxparams": 10,
+  "maxdepth": 10,
+  "maxstatements": 200,
+  "maxlen": 1000,
+
+  "maxerr": 10,
+  "globalstrict": true,
+
+  "browser": true,
+  "jquery": true,
+  "node": true,
+  "jasmine": true,
+
+  "predef": [
+    "gbc", "styler", "StateMachine", "uuid", "gbcTemplates", "Handlebars", "jsface", "Mousetrap",
+    "mousetrap", "debug", "modulum", "gTest", "moment", "Pikaday",
+    "browser", "by", "protractor", "i18n"
+  ]
+}

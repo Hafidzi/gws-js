@@ -1,0 +1,12 @@
+.gbc_LabelWidget {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 6px;
+  &.g_measured {
+    width: 100%;
+  }
+
+  .textContent{
+    flex: 1 1 auto;
+  }
+}

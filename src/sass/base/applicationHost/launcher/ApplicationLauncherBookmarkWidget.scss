@@ -1,0 +1,45 @@
+.gbc_ApplicationLauncherBookmarkWidget {
+  white-space: nowrap;
+  >.mt-card-texthead{
+    flex:0 0 auto;
+  }
+  .gbc_ApplicationLauncherBookmarkItemWidget {
+    padding: 5px;
+    margin: 2px 0;
+    line-height: normal !important;
+    .deleting {
+      min-width: 100%;
+      background-color: $gbc-primary-color;
+      color:$text-light-100;
+      .undo {
+        margin-left: 32px;
+      }
+    }
+    &:hover {
+      background: $gbc-primary-light-color;
+      .link {
+        color: $text-dark-54;
+      }
+    }
+    .mt-as-link:first-child {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .title {
+      color: $gbc-primary-color;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .link {
+      font-size: 12px;
+      font-style: italic;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: block;
+    }
+    .logs {
+      display: none !important;
+    }
+  }
+}

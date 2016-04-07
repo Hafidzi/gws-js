@@ -1,0 +1,46 @@
+<div>
+  <h5 class="value_layoutEngineName"></h5>
+    <div class="aui">
+      <table>
+        <tr class="auititle"><td>grid</td><td></td></tr>
+        <tr><td>X</td><td class="value_posX"></td></tr>
+        <tr><td>Y</td><td class="value_posY"></td></tr>
+        <tr><td>Width</td><td class="value_gridWidth"></td></tr>
+        <tr><td>Height</td><td class="value_gridHeight"></td></tr>
+        <tr class="auititle"><td>preferred</td><td></td></tr>
+        <tr><td>width</td><td class="value_width"></td></tr>
+        <tr><td>height</td><td  class="value_height"></td></tr>
+      </table>
+    </div>
+    <div class="measures">
+      <table>
+        <tr class="auititle"><td></td><td>has value</td><td>width</td><td>height</td></tr>
+        <tr><td>Measured</td><td class="value_measured_hasSize"></td><td class="value_measured_width"></td><td class="value_measured_height"></td></tr>
+        <tr><td>Minimal</td><td class="value_minimal_hasSize"></td><td class="value_minimal_width"></td><td class="value_minimal_height"></td></tr>
+        <tr><td>Maximal</td><td class="value_maximal_hasSize"></td><td class="value_maximal_width"></td><td class="value_maximal_height"></td></tr>
+        <tr><td>Available</td><td class="value_available_hasSize"></td><td class="value_available_width"></td><td class="value_available_height"></td></tr>
+        <tr><td>Allocated</td><td class="value_allocated_hasSize"></td><td class="value_allocated_width"></td><td class="value_allocated_height"></td></tr>
+        <tr><td>Decorating</td><td class="value_decorating_hasSize"></td><td class="value_decorating_width"></td><td class="value_decorating_height"></td></tr>
+      </table>
+    </div>
+  <div class="stretch">
+    <table>
+      <tr class="auititle"><td>stretch</td><td></td></tr>
+      <tr><td>X</td><td class="value_stretch_x"></td></tr>
+      <tr><td>Y</td><td class="value_stretch_y"></td></tr>
+      <tr class="auititle"><td>children</td><td></td></tr>
+      <tr><td>X</td><td class="value_stretch_children_x"></td></tr>
+      <tr><td>Y</td><td class="value_stretch_children_y"></td></tr>
+    </table>
+  </div>
+    <div class="fromController">
+      <table>
+        <tr class="auititle"><td></td><td>controller info</td></tr>
+        <tr><td>Gravity horizontal</td><td>{{gravity.horizontal}}</td></tr>
+        <tr><td>Gravity vertical</td><td>{{gravity.vertical}}</td></tr>
+        {{#if sizePolicy}}
+          <tr><td>Size policy</td><td>{{sizePolicy.mode}}</td></tr>
+        {{/if}}
+      </table>
+    </div>
+</div>

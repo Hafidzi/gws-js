@@ -1,0 +1,57 @@
+@mixin mt-button {
+
+  /*height:$field-default-height;*/
+  min-height: $field-default-height;
+  line-height: $field-default-height;
+  padding-left: 8px;
+  padding-right: 8px;
+  min-width: $button-default-width;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  background-color: $gbc-primary-color;
+  color: $text-light-87;
+  &:not(.disabled):hover {
+    background-color: $gbc-primary-medium-color;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:not(.disabled):active {
+    box-shadow: none;
+  }
+  &.disabled, &.disabled:focus {
+    background-color: $gbc-separator-color;
+    cursor: default;
+  }
+  &.mt-button-flat {
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: transparent;
+    color: $gbc-primary-color;
+    &:not(.disabled):hover {
+      background-color: transparent;
+      color: $gbc-primary-medium-color;
+    }
+    &.disabled, &.disabled:focus {
+      color: $gbc-primary-light-color;
+    }
+  }
+
+  &.content-left {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &.content-right {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  &.text-hidden {
+    span {
+      display: none;
+    }
+  }
+}
+
+.mt-button{@include mt-button();}

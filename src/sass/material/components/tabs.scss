@@ -1,0 +1,107 @@
+.mt-tabs {
+  display: flex;
+  flex-direction: column;
+  .mt-tabbar {
+/*    height: 28px;*/
+    font-size: 16px;
+    line-height: 26px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: row;
+  /*  align-items: stretch;*/
+    cursor: default;
+
+    .mt-tab {
+     /* display: inline-block;*/
+
+      &.mt-tab-left, &.mt-tab-right {
+        transition: opacity 0.3s ease;
+        opacity: 0;
+        font-size: 32px;
+        text-align: center;
+        width: 72px;
+      }
+
+      .mt-tab {
+        padding-left: 12px;
+        padding-right: 12px;
+
+        &.mt-tab-current {
+          color: $primary-400;
+          border-bottom: solid 2px $primary-400;
+        }
+        .close {
+          line-height: 26px;
+          font-size: 14px;
+          &.mt-tabs-hideclose {
+            display: none;
+          }
+        }
+      }
+
+      &.mt-tab-titles {
+        display:flex;
+        flex-direction: row;
+        @include flexible_guest_stretch;
+        white-space: nowrap;
+        overflow: hidden;
+
+        & > div{
+          &:hover{
+            cursor: pointer;
+          }
+        }
+        .mt-tab-text {
+          min-width: 1px;
+          min-height: 1px;
+          display: inline-block;
+          color: $text-dark-87;
+        }
+
+        .gbc_ImageWidget {
+          display: inline-block;
+        }
+      }
+    }
+
+  }
+
+  > .mt-tabcontents {
+    @include flexible_guest_stretch;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    > .mt-tabcontents-container {
+      flex: 1 1 auto;
+      position: relative;
+      margin: 6px;
+      overflow: hidden;
+      .mt-tabcontents-placeholder {
+    }
+    > .mt-tab {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: $z-index-Normal;
+      transition: left 0.5s, opacity 0.5s;
+      &.mt-tab-minus1 {
+        left: -100%;
+      }
+      &.mt-tab-current {
+        pointer-events: all;
+        //opacity: 1;
+        z-index: $z-index-above-Normal;
+      }
+      &.mt-tab-plus1 {
+        left: 100%;
+      }
+      > * {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+}

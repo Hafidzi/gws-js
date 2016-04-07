@@ -1,0 +1,43 @@
+.gbc_ImageWidget {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  &.gbc_fixedSvg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &.g_measuring {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  svg {
+    flex: 1 1 auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  .gbc_TableColumnItemWidget > .containerElement > & {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    display: block;
+    text-align: center;
+    img {
+      display: inline-block;
+      width: auto !important;
+      height: auto !important;
+      max-height: 100% !important;
+    }
+  }
+
+  &.gbc_withBorder {
+    background: transparent;
+    padding: 2px;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 4px rgba(0,0,0,.24);
+  }
+}

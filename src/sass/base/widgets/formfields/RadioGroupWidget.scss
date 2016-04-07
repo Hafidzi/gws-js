@@ -1,0 +1,33 @@
+.gbc_RadioGroupWidget, .gbc_DummyRadioGroupWidget {
+  white-space: nowrap;
+  cursor: default;
+  
+  .gbc_RadioGroupItem {
+    display: inline-flex;
+
+    > span {
+      margin: 0 8px;
+    }
+    margin: 2px 0;
+    padding: 2px;
+  }
+  span {
+    white-space: nowrap;
+  }
+  &.gbc_RadioGroupWidget_vertical, &.gbc_DummyRadioGroupWidget_vertical{
+    > .gbc_RadioGroupItem {
+      display: flex;
+    }
+    &.g_measuring {
+      flex-direction: column;
+    }
+  }
+
+  &.gbc_Focus{
+    .gbc_RadioGroupItem.aimed{
+      outline-style: dotted;
+      outline-width: 1px;
+      outline-color: $gbc-separator-color;
+    }
+  }
+}

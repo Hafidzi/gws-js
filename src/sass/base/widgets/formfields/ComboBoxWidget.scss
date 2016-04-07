@@ -1,0 +1,20 @@
+.gbc_ComboBoxWidget {
+  display: flex;
+  background: $gbc-field-background-color;
+  cursor:pointer;
+
+  .gbc_dataContentPlaceholder{
+    flex: 1 1 auto;
+  }
+
+  i.zmdi-menu-down{
+    flex: 0 1 auto;
+    line-height: 26px;
+  }
+
+  .gbc_LabelWidget, .gbc_ValueLabelWidget{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}

@@ -1,0 +1,34 @@
+
+.mt-list {
+  margin: 0;
+  padding: 0;
+  .mt-list-item {
+    display: flex;
+    background: $gbc-field-background-color;
+    list-style: none;
+    height: 72px;
+    line-height: 72px;
+    font-size: 16px;
+    padding-left: 16px;
+    > * {
+      transition: all 0.5s ease;
+    }
+    > :not(.mt-list-item-action){
+      @include flexible_guest_stretch;
+    }
+    .mt-list-item-action {
+      align-self: center;
+      display: flex;
+      height: 100%;
+      padding-left: 12px;
+      padding-right: 12px;
+      align-items: center;
+    }
+  }
+  &.mt-list-narrow .mt-list-item {
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    padding-left: 14px;
+  }
+}

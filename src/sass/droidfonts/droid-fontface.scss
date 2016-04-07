@@ -1,0 +1,38 @@
+$droid-font-path: 'fonts' !default;
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$droid-font-path}/droidsans-regular.eot');
+  src: local('Droid Sans'), local('DroidSans'),
+  url('#{$droid-font-path}/droidsans-regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$droid-font-path}/droidsans-regular.woff') format('woff'),
+  url('#{$droid-font-path}/droidsans-regular.ttf') format('truetype'),
+  url('#{$droid-font-path}/droidsans-regular.svg#droidsans-regular') format('svg');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('#{$droid-font-path}/droidsans-bold.eot');
+  src: local('Droid Sans Bold'), local('DroidSans-Bold'),
+  url('#{$droid-font-path}/droidsans-bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$droid-font-path}/droidsans-bold.woff') format('woff'),
+  url('#{$droid-font-path}/droidsans-bold.ttf') format('truetype'),
+  url('#{$droid-font-path}/droidsans-bold.svg#droidsans-bold') format('svg');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'Droid Sans Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$droid-font-path}/droidsansmono.eot');
+  src: local('Droid Sans Mono'), local('DroidSansMono'),
+  url('#{$droid-font-path}/droidsansmono.eot?#iefix') format('embedded-opentype'),
+  url('#{$droid-font-path}/droidsansmono.woff') format('woff'),
+  url('#{$droid-font-path}/droidsansmono.ttf') format('truetype'),
+  url('#{$droid-font-path}/droidsansmono.svg#droidsansmono') format('svg');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}

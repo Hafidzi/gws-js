@@ -1,0 +1,42 @@
+.gbc_ButtonWidget{
+  padding: 0 8px;
+  cursor:pointer;
+  > div {
+    display: flex;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+
+    min-width: $field-default-height;
+    min-height: $field-default-height;
+
+    .gbc_ImageWidget {
+      fill: $text-light-87;
+    }
+
+    .gbc_imageContainer {
+      padding: 4px;
+    }
+
+    .gbc_autoScale {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &.gbc_Focus .mt-button{
+    background-color: $gbc-primary-medium-color;
+  }
+
+  /* Needed for IE */
+  &.g_measuring{
+    flex-direction: column;
+  }
+
+  .menu {
+    .gbc_ImageWidget {
+      fill: $text-dark-87;
+    }
+  }
+}

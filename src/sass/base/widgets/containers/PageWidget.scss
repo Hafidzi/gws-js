@@ -1,0 +1,13 @@
+.gbc_PageWidget{
+  z-index: 1;
+  background-color: $gbc-secondary-background-color;
+  &.currentPage {
+    z-index: 2 !important;
+  }
+  &.g_measuring{
+    width:auto !important;
+    height:auto !important;
+    overflow: visible;
+
+  }
+}

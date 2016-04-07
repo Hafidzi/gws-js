@@ -1,0 +1,69 @@
+/// FOURJS_START_COPYRIGHT(D,2014)
+/// Property of Four Js*
+/// (c) Copyright Four Js 2014, 2015. All Rights Reserved.
+/// * Trademark of Four Js Development Tools Europe Ltd
+///   in the United States and elsewhere
+///
+/// This file can be modified by licensees according to the
+/// product manual.
+/// FOURJS_END_COPYRIGHT
+
+"use strict";
+
+modulum('VisibleVMBehavior', ['BehaviorBase'],
+  /**
+   * @param {gbc} context
+   * @param {classes} cls
+   */
+  function(context, cls) {
+    /**
+     * Behavior controlling the widget's visibility
+     * @class classes.HiddenVMBehavior
+     * @extends classes.BehaviorBase
+     */
+    cls.VisibleVMBehavior = context.oo.Class(cls.BehaviorBase, function($super) {
+      /** @lends classes.HiddenVMBehavior.prototype */
+      return {
+        __name: "VisibleVMBehavior",
+        /** @type {classes.NodeBase} */
+        _activeNode: null,
+
+        /**
+         * @constructs {classes.VisibleVMBehavior}
+         * @param {classes.ControllerBase} controller
+         * @param {classes.NodeBase} activeAttributeNode
+         */
+        constructor: function(controller, activeAttributeNode) {
+          $super.constructor.call(this, controller);
+          this._activeNode = activeAttributeNode;
+
+        },
+        /**
+         * Updates the widget's visibility depending on the AUI tree information
+         */
+        _apply: function() {
+          var widget = this._controller.getWidget();
+          if (widget && widget.setHidden) {
+            var activeValue = false;
+            if (!!this._activeNode) {
+              activeValue = this._activeNode.attribute('active');
+            }
+            widget.setHidden(!activeValue);
+          }
+        },
+        _getWatchedAttributes: function() {
+          return [{
+            node: this._activeNode,
+            attribute: 'active'
+          }];
+        },
+        /**
+         * @inheritDoc
+         */
+        destroy: function() {
+          this._activeNode = null;
+          $super.destroy.call(this);
+        }
+      };
+    });
+  });

@@ -1,0 +1,28 @@
+.mt-progress{
+  padding-top: 6px;
+  padding-bottom: 6px;
+  .mt-progress-bar {
+    transition: height 0.3s;
+    height: 1px;
+    background-color: $gbc-primary-light-color;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    position: relative;
+    .mt-progress-level {
+      background-color: $gbc-primary-color;
+      width: 0;
+      height: 100%;
+      transition: width 0.3s, box-shadow 0.3s;
+      .mt-progress.running > .mt-progress-bar > & {
+        box-shadow: 1px 1px 1px 1px $gbc-primary-color;
+      }
+      &.mt-progress-level-unknown {
+        width: 100%;
+      }
+    }
+  }
+  &.running > .mt-progress-bar {
+    height: 4px;
+  }
+
+}

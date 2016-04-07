@@ -1,0 +1,35 @@
+.mt-field {
+  border:none;
+  background: $gbc-field-background-color;
+  border-bottom: solid 2px $gbc-primary-light-color;
+  min-height: $field-default-height;
+  height: $field-default-height;
+  padding: 2px 6px;
+  display: flex;
+  align-items: center;
+  cursor: text;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,.24);
+
+  &.gbc_Focus {
+    border:none;
+    outline: none;
+    border-bottom: solid 2px $gbc-primary-medium-color;
+    box-shadow: inset 0 1px 4px rgba(0,0,0,.24), inset 0 1px 1px rgba(0,0,0,.24);
+  }
+  input, textarea {
+    flex:1 1 0px;
+    background-color: transparent;
+    resize: none;
+    outline: 0;
+    cursor: inherit;
+  }
+  &.disabled {
+    background-color: $gbc-field-disabled-background-color;
+    cursor: default;
+  }
+  &.gbc_NoBorder {
+    background-color: transparent;
+  }
+}
+

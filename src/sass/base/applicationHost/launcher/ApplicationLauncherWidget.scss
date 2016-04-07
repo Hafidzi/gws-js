@@ -1,0 +1,10 @@
+.gbc_ApplicationLauncherWidget {
+  display: flex;
+  flex-direction: column;
+  > .containerElement {
+    flex: 1 1 auto;
+    > *{
+      margin: 10px;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.gbc_MonitorDebugTreeWidget {
+  display: flex;
+  > .part{
+    flex: 1 1 50px;
+    overflow: auto;
+    padding: 2px 4px;
+  }
+}

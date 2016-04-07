@@ -1,0 +1,11 @@
+{
+  "compile": {
+    "mode":"cdev",
+    "customization": false,
+    "with":{
+      "nwjs": false,
+      "android": false,
+      "ios": false
+    }
+  }
+}

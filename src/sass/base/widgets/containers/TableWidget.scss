@@ -1,0 +1,328 @@
+$gbc-TableWidget-selected-color: $gbc-primary-medium-color !default;
+$gbc-TableWidget-hover-color: $gbc-primary-light-color !default;
+$gbc-TableWidget-headers-color: $gbc-header-color !default;
+$gbc-TableWidget-border-color: $gbc-separator-color !default;
+$gbc-TableWidget-mrs-border-color: $gbc-separator-color !default;
+$gbc-TableWidget-dnd-border-color: $gbc-separator-color !default;
+
+.gbc_TableWidget{
+
+  display: flex;
+  flex-direction: row;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,.24);
+  padding: 2px;
+  overflow: hidden;
+
+  &.g_measuring {
+    .gbc_TableColumnItem {
+      height:  auto !important;
+    }
+
+    .gbc_TableColumnItemWidget {
+      height: auto !important;
+      width: auto !important;
+    }
+
+    .gbc_TableColumnWidget {
+      height: auto !important;
+      width: auto !important;
+      & > .gbc_TableAfterLastItemDropZone{
+        display: none;
+      }
+    }
+  }
+
+  &.showGrid {
+    .gbc_TableColumnItemWidget {
+      border-right: solid 1px $gbc-TableWidget-border-color;
+      border-bottom: solid 1px $gbc-TableWidget-border-color;
+    }
+  }
+
+  &:not(.disabled).inputMode {
+    .gbc_LabelWidget.disabled {
+     background-color: $gbc-field-disabled-background-color;
+    }
+  }
+
+  .gbc_TableColumnWidget {
+
+    flex: 0 0 auto;
+
+    &.resizing {
+      border-right: solid 1px $gbc-TableWidget-border-color;
+    }
+    &.reordering_right {
+      border-right: dotted 1px $gbc-TableWidget-border-color;
+    }
+    &.reordering_left {
+      border-left: dotted 1px $gbc-TableWidget-border-color;
+    }
+
+    & > .gbc_TableColumnItemWidget {
+      display: flex;
+      white-space: nowrap;
+      overflow: hidden;
+
+      & > .gbc_TreeAnchor {
+        cursor: default;
+        width: 16px;
+        margin: auto;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      & > .gbc_TableItemImage {
+        display: flex;
+        align-items: center;
+        & > .gbc_ImageWidget {
+          margin-left: 2px;
+
+          & > img {
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+      }
+
+      & > :not(.gbc_TreeAnchor):not(.gbc_TableItemImage) {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: stretch;
+      }
+      & > .containerElement {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        position: relative;
+        overflow: hidden;
+
+        > * {
+          flex: 1 1 auto;
+          overflow: hidden;
+        }
+
+        .mt-field {
+          box-shadow: none;
+          border: none;
+        }
+
+        .gbc_LabelWidget, .gbc_EditWidget, .gbc_CheckBoxWidget, .gbc_SliderWidget, .gbc_TextEditWidget, .gbc_DummyTextEditWidget, .gbc_DateEditWidget, .gbc_ButtonEditWidget {
+          display: flex;
+          align-items: center;
+          height: inherit;
+        }
+        .gbc_TextEditWidget {
+          flex-direction: column;
+          padding-top: 1px;
+          padding-bottom: 1px;
+
+          > textarea {
+            flex: 1 1 auto;
+          }
+        }
+        .gbc_ImageWidget {
+          box-shadow: none;
+        }
+      }
+    }
+
+    display: inline-block;
+    vertical-align: top;
+
+    .valueHidden {
+      display: none !important;
+    }
+
+    & > .gbc_TableAfterLastItemDropZone {
+      height: 9999px;
+    }
+  }
+
+  &.multiRowSelection {
+    .currentRow {
+      border-top: solid 1px $gbc-TableWidget-mrs-border-color;
+      border-bottom: solid 1px $gbc-TableWidget-mrs-border-color;
+      background-color: inherit;
+    }
+    .gbc_TableColumnWidget:last-child .currentRow {
+      border-right: solid 1px $gbc-TableWidget-mrs-border-color;
+    }
+    .gbc_TableColumnWidget:nth-child(2) .currentRow {
+      border-left: solid 1px $gbc-TableWidget-mrs-border-color;
+    }
+
+    .selectedRow {
+      background-color: $gbc-TableWidget-selected-color;
+      color: $gbc-field-background-color;
+      fill: $gbc-field-background-color;
+    }
+  }
+
+  &:not(.multiRowSelection) {
+    &:not(.disabled) {
+      &:not(.gbc_TreeAnchor) {
+        .highlightRow > .currentRow {
+          background-color: $gbc-TableWidget-selected-color;
+          color: $gbc-field-background-color;
+          fill: $gbc-field-background-color;
+        }
+        .currentColumn.highlightCell > .currentRow {
+          background-color: $gbc-TableWidget-selected-color;
+          color: $gbc-field-background-color;
+          fill: $gbc-field-background-color;
+        }
+      }
+    }
+  }
+
+  .dropIndicatorInsert {
+    border-top: 1px solid $gbc-TableWidget-dnd-border-color;
+  }
+
+  .dropIndicatorInsertAfter {
+    border-bottom: 1px solid $gbc-TableWidget-dnd-border-color;
+  }
+
+  .dropIndicatorSelect {
+    background-color: $gbc-TableWidget-hover-color;
+  }
+
+  .gbc_TableContainer {
+    flex-grow: 1;
+    @include noTextSelection;
+    cursor: default;
+    min-width: 30px;
+  }
+  .gbc_TableLeftContainer {
+    border-right: solid 1px $gbc-TableWidget-border-color;
+  }
+
+  .gbc_TableRightContainer {
+    border-left: solid 1px $gbc-TableWidget-border-color;
+  }
+
+  .gbc_TableLeftContainer, .gbc_TableRightContainer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .gbc_TableColumnsContainer {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    display: flex;
+    background-color: $gbc-field-background-color;
+  }
+
+  .gbc_TableColumnsContainer, .gbc_TableRightColumnsContainer {
+    flex: 1 1 auto;
+  }
+
+  .gbc_TableContainer, .gbc_TableLeftContainer, .gbc_TableRightContainer {
+
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    overflow: hidden;
+
+    .gbc_TableColumnsHeaders, .gbc_TableLeftColumnsHeaders, .gbc_TableRightColumnsHeaders {
+      overflow: hidden;
+      flex: 0 0 auto;
+      display: inline-flex;
+      background-color: $gbc-TableWidget-headers-color;
+
+      .gbc_TableColumnHeader {
+        display: inline-flex;
+        flex: 0 0 auto;
+        align-items: center;
+
+        padding-top: 8px;
+        padding-bottom: 5px;
+        padding-left: 2px;
+        cursor: pointer;
+        text-align: left;
+        overflow: hidden;
+
+        .headerText {
+          font-size: 12px;
+          font-weight: bold;
+          flex-grow: 1;
+          min-width:0;
+          margin-left: 3px;
+        }
+
+        .resizer {
+          width: 5px;
+          height: 1em;
+          border-right: solid 1px grey;
+          cursor: ew-resize;
+          z-index: $z-index-above-Normal;
+        }
+      }
+    }
+
+    .gbc_TableScrollArea, .gbc_TableRightScrollArea {
+      @include flexible_guest_stretch;
+      flex-basis: 0;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .gbc_TableRightScrollArea {
+      overflow-x: visible;
+    }
+
+    .gbc_TableColumnsFooter {
+      display: flex;
+      background-color: $gbc-TableWidget-headers-color;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      z-index: 1;
+      padding-left: 4px;
+
+      .gbc_TableColumnAggregate {
+        flex: 0 0 auto;
+        display: inline-block;
+        padding-top: 4px;
+        margin-top: 4px;
+        margin-bottom: 3px;
+        padding-bottom: 5px;
+        padding-right: 5px;
+        cursor: default;
+        text-align: right;
+        border-right: solid 1px $gbc-TableWidget-border-color;
+      }
+
+      .gbc_TableAggregateGlobalText {
+        order: 0;
+        flex: 0 0 auto;
+        position: absolute;
+        top: 8px;
+        overflow: visible;
+      }
+    }
+  }
+
+  .gbc_TableHorizontalScroller, .gbc_TableRightHorizontalScroller {
+    display: flex;
+    flex: 1 1 auto;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .gbc_TableVerticalScroller {
+    flex-grow: 0;
+    flex-shrink: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    .spacer {
+      width: 1px; // fix for Firefox
+    }
+  }
+}

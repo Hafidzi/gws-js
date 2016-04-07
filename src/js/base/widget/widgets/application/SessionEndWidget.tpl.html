@@ -1,0 +1,43 @@
+<div>
+  <div class="mt-card">
+    <div class="mt-card-richhead">
+          <span class="mt-card-header-text">
+          </span>
+      <span class="mt-card-header-rightpic"><i class="zmdi zmdi-close-circle"></i></span>
+    </div>
+    <div class="mt-card-body">
+      <div class="message hidden"></div>
+      <p class="session hidden">
+        <span class="sessionTitle" data-i18n="app.ending.session">Session ID</span> :
+        <span class="sessionID"></span>
+      </p>
+      <ul class="mt-actions">
+        <li class="mt-action vmLink from-session hidden">
+          <a href="#" target="_blank" title="Virtual Machine log">
+            <i class="zmdi zmdi-file-text"></i> <span class="sessionVMLog" data-i18n="app.logs.vm">Get the VM Log</span>
+          </a>
+        </li>
+        <li class="mt-action uaLink from-session hidden">
+          <a href="#" target="_blank" title="Proxy log">
+            <i class="zmdi zmdi-file-text"></i> <span class="sessionVMLog" data-i18n="app.logs.proxy">Get the Proxy Log</span>
+          </a>
+        </li>
+        <li class="mt-action auiLink mt-as-link from-session_ hidden">
+          <a title="Aui log">
+            <i class="zmdi zmdi-file-text"></i> Get the AUI log
+          </a>
+        </li>
+        <li class="mt-action restartApp from-ua hidden">
+          <a href="#" title="Restart the app">
+            <i class="zmdi zmdi-repeat"></i> <span class="sessionVMLog" data-i18n="app.restart">Restart the same application</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="mt-card-actions">
+      <button type="button" class="mt-button mt-button-flat closeApplicationEnd" aria-label="Close">
+        <span aria-hidden="true" data-i18n="app.close">CLOSE</span>
+      </button>
+    </div>
+  </div>
+</div>

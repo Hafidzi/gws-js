@@ -1,0 +1,10 @@
+.g_GridLayoutEngine {
+  position: relative;
+  > .g_GridElement {
+    position: absolute;
+    &.gl_gridElementHidden{
+      opacity:0;
+      pointer-events: none;
+    }
+  }
+}

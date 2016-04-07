@@ -1,0 +1,16 @@
+$gbc-ProgressBar-color: $gbc-primary-color;
+
+.gbc_ProgressBarWidget {
+  > div {
+    position: relative;
+    > div {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background: $gbc-ProgressBar-color;
+      width: 0;
+      transition: width 0.4s;
+    }
+  }
+}

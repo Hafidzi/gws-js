@@ -1,0 +1,35 @@
+.gbc_GroupWidget {
+  padding: 4px;
+  display: flex;
+
+  &.g_measuring {
+    flex-direction: column;
+  }
+  &.g_measured {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .g_gridChildrenInParent>&.g_measured {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  > .mt-card {
+    display: flex;
+    flex: 1 1 auto;
+    background-color: $gbc-secondary-background-color;
+
+    > .gbc_GroupWidgetContent {
+      padding: 6px;
+      flex: 1 1 auto;
+
+      > .gbc_GroupTitleWidget:not(.empty) {
+        padding: 4px 0 8px 0;
+      }
+    }
+  }
+}
+
+.gbc_GroupTitleWidget {
+  font-weight: bold;
+  white-space: nowrap;
+}

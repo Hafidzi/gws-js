@@ -1,0 +1,23 @@
+.gbc_TextEditWidget, .gbc_DummyTextEditWidget{
+  line-height: 1em;
+  padding: 6px;
+  &.g_measuring{
+    width:auto!important;
+    height:auto!important;
+  }
+  &.g_measured, &.g_measured textarea{
+      height: 100%;
+      width:100%;
+  }
+
+  .textEditHtml{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    ul{
+      margin-left: 35px;
+    }
+  }
+
+}

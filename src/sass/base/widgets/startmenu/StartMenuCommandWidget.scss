@@ -1,0 +1,29 @@
+$gbc-StartMenuCommand-hover: $gbc-primary-light-color;
+
+.gbc_StartMenuCommandWidget {
+  display: flex;
+  padding: 8px 16px;
+  margin-left: 16px;
+
+  &::before {
+    content: '';
+    width: 16px;
+  }
+
+  &:hover {
+    background-color: $gbc-StartMenuCommand-hover;
+  }
+
+  &.disabled {
+    color: $text-dark-26;
+  }
+
+  > .gbc_ImageWidget {
+    margin-right: 8px;
+  }
+
+  > .gbc_startMenuCommandText {
+    flex: 1 1 auto;
+    white-space: nowrap;
+  }
+}

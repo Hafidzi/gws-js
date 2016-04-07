@@ -1,0 +1,27 @@
+.gbc_SessionSidebarApplicationItemWidget {
+  > div {
+    display: flex;
+    flex-direction: row;
+    line-height: 32px;
+    > .applicationName{
+      flex: 1 1 auto;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  > ul {
+    padding-left: 14px;
+  }
+  &.activeWindow .applicationName{
+    font-weight: bold;
+  }
+  .applicationIcon {
+    display: flex;
+    align-items: center;
+
+    .gbc_ImageWidget {
+      margin-right: 4px;
+    }
+  }
+}

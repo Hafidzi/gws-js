@@ -1,0 +1,42 @@
+$gbc-StartMenuGroup-hover: $gbc-primary-light-color;
+
+.gbc_StartMenuGroupWidget {
+
+  &.gbc_open {
+    > .gbc_startMenuGroupTitle::before {
+      content: '\25bc';
+    }
+
+    > .containerElement {
+      display: block;
+    }
+  }
+
+  > .gbc_startMenuGroupTitle {
+    display: flex;
+    padding: 8px 18px;
+    margin-left: 8px;
+
+    &::before {
+      content: '\25ba';
+      width: 16px;
+    }
+
+    &:hover {
+      background-color: $gbc-StartMenuGroup-hover;
+    }
+
+    > .gbc_ImageWidget {
+      margin-right: 8px;
+    }
+
+    > .gbc_startMenuGroupTitleText {
+      white-space: nowrap;
+      margin-left: 8px;
+    }
+  }
+  > .containerElement {
+    display: none;
+    padding-left: 1em;
+  }
+}

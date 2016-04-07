@@ -1,0 +1,69 @@
+/// FOURJS_START_COPYRIGHT(D,2015)
+/// Property of Four Js*
+/// (c) Copyright Four Js 2015, 2015. All Rights Reserved.
+/// * Trademark of Four Js Development Tools Europe Ltd
+///   in the United States and elsewhere
+///
+/// This file can be modified by licensees according to the
+/// product manual.
+/// FOURJS_END_COPYRIGHT
+
+.gbc_LogPlayerMainContainerWidget {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  > header {
+    display: flex;
+    align-items: center;
+    background-color: $mt-grey-200;
+    padding: 16px;
+    border-bottom: 1px solid $gbc-separator-color;
+
+    > * {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+
+    .logplayer-fileinput {
+      flex: 1 1 0;
+    }
+
+    .mt-button {
+      min-width: initial;
+    }
+  }
+  > .containerElement {
+    flex: 1 1 0;
+    position: relative;
+  }
+  > footer {
+    background-color: $mt-grey-200;
+    border-top: 1px solid $gbc-separator-color;
+    padding: 16px;
+    height: 150px;
+
+    > .logplayer-console {
+      display: block;
+      overflow: auto;
+      font-size: 10px;
+      width: 100%;
+      height: 100%;
+
+      > pre {
+        overflow: visible;
+
+        > span {
+          margin: 0 4px;
+        }
+
+        > .logplayer-console-context {
+          display: inline-block;
+          width: 100px;
+          border-right: 1px solid lightgray;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.menu {
+  .gbc_CheckBoxWidget {
+    cursor: pointer;
+    label {
+      cursor: pointer;
+    }
+  }
+
+  .gbc_HLineWidget {
+    border-bottom: 1px solid $text-dark-12;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    min-height: 1px;
+    margin: 8px 0;
+    cursor: auto;
+  }
+}

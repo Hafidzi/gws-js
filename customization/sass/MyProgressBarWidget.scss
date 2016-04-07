@@ -1,0 +1,10 @@
+.gbc_MyProgressBarWidget {
+  display: flex;
+
+  .mt-progress-bar {
+    flex: 1 1 0;
+  }
+  .MyProgressBarWidget-value {
+    padding-left: 8px;
+  }
+}

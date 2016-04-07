@@ -1,0 +1,46 @@
+.gbc_ScrollWidget{
+  flex-grow: 0;
+  flex-shrink: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+will-change:all;
+  .spacer {
+    width: 1px; // fix for Firefox
+    min-height: 1px;
+    will-change:all;
+  }
+
+}
+
+.gbc_ScrollGridWidget, .gbc_GridWidget{
+  > .g_GridElement > .currentRow {
+    background-color: $gbc-primary-medium-color;
+    color: $gbc-field-background-color;
+  }
+}
+
+
+
+
+
+.gbc_ScrollAreaWidget:not(.thinScrollBar){
+  flex-grow: 0;
+  flex-shrink: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  will-change:all;
+  .spacer {
+    width: 1px; // fix for Firefox
+    min-height: 1px;
+    will-change:all;
+  }
+
+}
+
+.gbc_ScrollAreaWidget{
+
+  height: 100%;
+  &.g_measuring .spacer{
+    height:1px !important;
+  }
+}

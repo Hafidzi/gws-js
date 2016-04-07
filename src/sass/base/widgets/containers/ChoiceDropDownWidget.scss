@@ -1,0 +1,39 @@
+.gbc_ChoiceDropDownWidget {
+  //.gbc_DropDownWidget;
+
+  &>div {
+    /* size & position */
+    position:relative;
+    display: block;
+    line-height: 28px;
+    min-height: 28px;
+    padding: 0 6px;
+    font-weight: 400;
+
+    color: $text-dark-87;
+    white-space: nowrap;
+    transition:all 0.2s ease;
+
+    &:not(.disabled):hover, &:not(.disabled).current {
+      text-decoration: none;
+      color: $text-dark-87;
+      background-color: $gbc-primary-light-color;
+      cursor: pointer;
+    }
+    &:not(.disabled).current {
+      background-color: $gbc-primary-medium-color;
+    }
+    &.disabled {
+      cursor:default;
+      opacity: 0.3;
+      *{
+        cursor:default;
+      }
+    }
+  }
+}
+
+.active {
+  opacity:1;
+  pointer-events: auto;
+}

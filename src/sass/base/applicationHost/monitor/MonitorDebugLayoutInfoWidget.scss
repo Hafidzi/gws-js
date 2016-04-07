@@ -1,0 +1,38 @@
+.gbc_MonitorDebugLayoutInfoWidget {
+  > div {
+    vertical-align: top;
+
+    display: inline-block;
+    table {
+      width: 240px;
+      tr:nth-child(even) {
+        background-color: $primary-100;
+      }
+      .auititle {
+        text-transform: uppercase;
+        background: $primary-200 !important;
+      }
+
+    }
+    &.aui {
+      table {
+        width: 100px;
+      }
+    }
+    &.deltas {
+      table {
+        width: 70px;
+      }
+    }
+    &.stretch {
+      table {
+        width: 70px;
+      }
+    }
+    &.fromController {
+      table {
+        width: 200px;
+      }
+    }
+  }
+}

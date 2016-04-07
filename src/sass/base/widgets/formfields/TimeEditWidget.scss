@@ -1,0 +1,27 @@
+@import "../../../../../bower_components/pikaday-time/scss/pikaday";
+
+.gbc_TimeEditWidget {
+  display: flex;
+  >input{
+    flex:1 1 auto;
+  }
+  >div{
+    user-select: none;
+    >div{
+      width: 1em;
+      display: flex;
+      align-items: center;
+      transition:background-color 0.5s;
+      cursor: pointer;
+      height: 12px;
+      color: $gbc-genero-black;
+
+      &:hover {
+        background-color:$gbc-primary-light-color;
+      }
+      >span{
+        font-size: 0.6em;
+      }
+    }
+  }
+}

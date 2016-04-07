@@ -1,0 +1,74 @@
+@mixin flex-stretch($direction:column) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+@mixin flexible_host_stretch($direction:column) {
+  @include flex-stretch($direction);
+}
+
+@mixin flexible_host_stretch_row() {
+  @include flexible_host_stretch(row);
+}
+.flexible_host_stretch_row{
+  @include flexible_host_stretch_row();
+}
+@mixin flexible_host_stretch_col() {
+  @include flexible_host_stretch();
+}
+
+@mixin flex-center($direction:column) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexible_host_center($direction:column) {
+  @include flex-center($direction);
+}
+
+@mixin flexible_host_center_row {
+  @include flexible_host_center(row);
+}
+
+.flexible_host_center_row {
+  @include flexible_host_center_row();
+}
+
+@mixin flexible_host_center_col {
+  @include flexible_host_center();
+}
+.flexible_host_center_col {
+  @include flexible_host_center_col();
+}
+
+@mixin flexible_guest_stretch {
+  flex: 1 1 auto;
+}
+.flexible_guest_stretch{
+  @include flexible_guest_stretch();
+}
+
+@mixin flexible_guest_nostretch {
+  flex: 0 0 auto;
+}
+
+.flex-row{
+  flex-direction: row !important;
+}
+.flex-row-reverse{
+  flex-direction: row-reverse !important;
+}
+
+.flex-column{
+  flex-direction: column !important;
+}
+
+.flex-column-reverse{
+  flex-direction: column-reverse !important;
+}
+

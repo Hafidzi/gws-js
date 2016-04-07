@@ -1,0 +1,65 @@
+@import "GridLayoutEngine";
+@import "HBoxLayoutEngine";
+@import "VBoxLayoutEngine";
+
+.dpiTest{
+  width:1in;
+  height:1in;
+  position:absolute;
+  top:-10000px;
+  left:-10000px;
+  visibility:hidden;
+  padding:0;
+}
+
+.measureTool {
+  position: absolute;
+  top: -10000px;
+  left: -10000px;
+}
+
+.measurementHost {
+  position: absolute;
+  top: -100000px;
+  left:- 100000px;
+}
+
+body.debug {
+  .g_GridLayoutEngine > .g_GridElement {
+    outline: green 1px inset;
+  }
+  .g_HBoxLayoutEngine >.g_BoxElement {
+    outline: blue 1px inset;
+  }
+  .g_VBoxLayoutEngine >.g_BoxElement {
+    outline: red 1px inset;
+  }
+}
+
+.gbc_dataContentMeasure{
+  line-height: 1em;
+  display: none;
+}
+
+.g_measuring{
+  height: auto;
+}
+.g_measuring.gbc_dataContentPlaceholder:not(.gbc_dynamicMeasure) {
+  >:not(.gbc_dataContentMeasure){
+    display: none;
+
+  }
+  >.gbc_dataContentMeasure{
+    display: inline-flex;
+  }
+}
+.g_measuring.gbc_dataContentPlaceholder.gbc_dynamicMeasure {
+  >.gbc_dataContentMeasure{
+    display: none;
+  }
+}
+.g_measured.gbc_dataContentPlaceholder {
+  >.gbc_dataContentMeasure{
+    display: none;
+  }
+}

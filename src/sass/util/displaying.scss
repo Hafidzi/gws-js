@@ -1,0 +1,44 @@
+.gbc_Invisible {
+  position: absolute !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  top: -100000px !important;
+  left: -100000px !important;
+}
+
+.gbc_FocusHolder {
+  position: absolute !important;
+  top: -100000px !important;
+  left: -100000px !important;
+  will-change:all;
+}
+
+.gbc_NoBorder{
+  border:none !important;
+  box-shadow:none !important;
+  text-shadow:none !important;
+}
+
+@mixin vanished {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+.vanished{@include vanished();}
+
+.hidden {
+  display: none !important;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.disable-animations *,
+.disable-animations *:after,
+.disable-animations *:before {
+  transition: none !important;
+}
+
+.breakword{
+  word-break: break-all;
+}

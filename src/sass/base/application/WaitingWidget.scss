@@ -1,0 +1,48 @@
+$gbc-Waiting-backdrop-color: $gbc-disabled-color;
+
+.gbc_WaitingWidget {
+  background-color: $gbc-Waiting-backdrop-color;
+  >div {
+    min-width: 50px;
+    min-height: 30px;
+    width: 100%;
+    height: 100%;
+    @include flexible_host_center_row;
+    > div {
+      @include flexible_host_center_col;
+      @include flexible_guest_stretch;
+      text-align: center;
+      color: $text-dark-87;
+      align-self: center;
+      align-content: center;
+      align-items: center;
+
+      > div {
+        margin: 0 auto;
+        width: 50px;
+        height: 30px;
+        text-align: center;
+        font-size: 10px;
+        & > div {
+          background-color: $text-dark-87;
+          height: 100%;
+          width: 6px;
+          display: inline-block;
+          animation: stretchdelay 1.2s infinite ease-in-out;
+          &.rect2 {
+            animation-delay: -1.1s;
+          }
+          &.rect3 {
+            animation-delay: -1.0s;
+          }
+          &.rect4 {
+            animation-delay: -0.9s;
+          }
+          &.rect5 {
+            animation-delay: -0.8s;
+          }
+        }
+      }
+    }
+  }
+}

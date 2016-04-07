@@ -1,0 +1,45 @@
+$gbc-ToolBar-hover-color: $gbc-primary-light-color;
+
+.gbc_ToolBarItemWidget {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+
+  &.flex-row span {
+    margin-left: 3px;
+  }
+
+  &.mt-item {
+    border-radius: 2px;
+    min-width: 56px;
+    cursor: pointer;
+
+    &:not(.disabled) {
+      &:hover {
+        background-color: $gbc-ToolBar-hover-color;
+      }
+    }
+
+    &.disabled {
+      cursor:default;
+      opacity: 0.3;
+      *{
+        cursor:default;
+      }
+    }
+  }
+
+  span {
+    line-height: initial;
+    font-size: smaller;
+    flex-grow: 1;
+    padding-top: 4px;
+  }
+
+  .gbc_autoScale {
+    width: 16px;
+    height: 16px;
+  }
+}

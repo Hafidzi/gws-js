@@ -1,0 +1,54 @@
+
+.mt-toolbar{
+  background-color: $gbc-primary-medium-color;
+  color: $mt-white;
+  height:$mt-toolbar-height;
+  line-height: $mt-toolbar-height;
+  transition: all 0.3s ease;
+  @include mt-shadow(2);
+  @include flex-stretch(row);
+  @at-root header#{&} {
+    z-index: $z-index-Toolbar;
+  }
+  >*{
+    line-height: $mt-toolbar-height;
+  }
+  a, a:focus, a:visited {
+    color:$text-light-100;
+  }
+  a:hover {
+    color:$text-light-87;
+  }
+  .mt-menutoggle{
+    width:$mt-toolbar-height;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mt-title{
+    @include flexible_guest_stretch;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 8px;
+  }
+  .mt-actions{
+    margin: 0;
+    >li{
+      display: inline-block;
+      width:$mt-toolbar-height;
+      text-align: center;
+      ul {
+        display: none;
+      }
+    }
+  }
+  .mt-item {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .mt-separator{
+    border-left: 1px solid $gbc-separator-color;
+  }
+}

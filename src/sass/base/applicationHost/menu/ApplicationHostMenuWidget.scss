@@ -1,0 +1,36 @@
+.gbc_MyApplicationHostMenuWidget {
+  > ul {
+    display: flex;
+  }
+
+  .gbc_ImageWidget {
+    display: inline-block;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+
+    > img, svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.gbc_ApplicationHostMenuRuntimeWidget{
+  animation: pulse 200ms infinite;
+  & >*:hover{
+    cursor: default;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}

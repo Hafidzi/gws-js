@@ -1,0 +1,26 @@
+.gbc_DropDownContainerWidget {
+  /* size & position */
+  position: absolute;
+  height: auto;
+  width:auto;
+  z-index:$z-index-DropDown;
+  overflow: auto;
+
+
+  /* Look */
+  background: $gbc-secondary-background-color;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+
+  /* Font & shadow */
+  &.active {
+    @include list-shadow;
+  }
+}
+
+.active {
+  opacity: 1;
+
+  pointer-events: auto;
+}

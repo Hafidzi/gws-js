@@ -1,0 +1,36 @@
+
+@media screen and (min-width: $gbc-sidebar-always-visible-min-width) {
+  .mt-maincontainer {
+    .mt-centralcontainer {
+      left:$gbc-sidebar-default-width;
+    }
+    .mt-sidebar-backdrop {
+      display: none;
+    }
+    .mt-toolbar .mt-menutoggle {
+      display: none;
+      pointer-events: none;
+    }
+    .mt-toolbar .mt-title {
+      margin-left: 24px;
+    }
+    &:not(.mt-sidebar-unavailable) {
+      .mt-sidebar {
+        left:0;
+        .mt-sidebar-content {
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 620px) {
+  .mt-side-by-side {
+    display: block;
+    overflow: auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  .mt-sidebar-content {
+    width: 300px;
+  }
+}

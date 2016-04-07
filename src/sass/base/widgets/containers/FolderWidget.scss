@@ -1,0 +1,26 @@
+.gbc_FolderWidget{
+  padding: 8px;
+
+  & > .mt-card {
+    background-color: $gbc-secondary-background-color;
+    width: 100%;
+    height: 100%;
+
+    & > .mt-tabbar {
+      padding: 8px 8px 0 8px;
+    }
+
+    & > .mt-tabcontents {
+      padding: 8px;
+    }
+  }
+  &.g_measuring {
+    overflow: visible;
+    > .mt-tabs > .mt-tabcontents {
+      overflow: visible;
+      & > .mt-tabcontents-container {
+        overflow: visible;
+      }
+    }
+  }
+}

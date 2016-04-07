@@ -1,0 +1,7 @@
+.gbc_ApplicationHostMenuDebugWidget {
+  order:100;
+  display: none !important;
+  .gbc__devmode__ & {
+    display: inline-block !important;
+  }
+}

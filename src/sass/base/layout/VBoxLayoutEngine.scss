@@ -1,0 +1,7 @@
+.g_VBoxLayoutEngine {
+  position: relative;
+  >.g_BoxElement {
+    left: 0;
+    position: absolute;
+  }
+}

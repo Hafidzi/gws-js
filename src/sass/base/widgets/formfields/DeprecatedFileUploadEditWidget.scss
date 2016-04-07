@@ -1,0 +1,7 @@
+.gbc_DeprecatedFileUploadEditWidget{
+  background-color: red;
+  color:#FFF;
+  >input, &.disabled >input {
+    background-color: red;
+  }
+}

@@ -1,0 +1,47 @@
+.gbc_MonitorDebugTreeItemWidget {
+  padding-left: 20px;
+  > .description{
+    height:18px;
+    display: flex;
+    flex-direction: row;
+    &:hover {
+      background: $primary-200;
+      cursor: pointer;
+    }
+    > .icon {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: $primary-500;
+      text-align: center;
+      color:$text-light-100;
+      font-weight: bold;
+      text-shadow: 0 0 2px $text-dark-100;
+      &::before {
+        content:'-';
+      }
+    }
+    > .label {
+      margin-left: 4px;
+      flex: 1 1 auto;
+    }
+    > .idRef {
+      align-self: flex-end;
+    }
+  }
+  > ul {
+    list-style-type: none;
+  }
+  &.collapsed {
+    > .description {
+      > .icon {
+        &::before {
+          content: '+';
+        }
+      }
+    }
+    > ul {
+      display: none;
+    }
+  }
+}

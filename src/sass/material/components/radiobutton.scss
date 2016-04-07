@@ -1,0 +1,30 @@
+.mt-radiobutton {
+  position: relative;
+  cursor: default;
+  width: 18px;
+  height: 18px;
+  border: 2px solid $gbc-secondary-color;
+  border-radius: 50%;
+
+  &.checked {
+    border-color: $gbc-primary-color;
+
+    & > .mt-radiobutton-mark {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background-color: $gbc-primary-color;
+    }
+
+    &.disabled > .mt-radiobutton-mark {
+      background-color: $gbc-disabled-color;
+    }
+  }
+
+  &.disabled {
+    border-color: $gbc-disabled-color;
+  }
+}

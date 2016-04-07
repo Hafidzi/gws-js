@@ -1,0 +1,18 @@
+{
+  "gbc-primary-background-color"         : "$mt-grey-200",
+  "gbc-secondary-background-color"       : "$mt-white",
+  "gbc-field-background-color"           : "$mt-white",
+  "gbc-field-disabled-background"        : "rgba(0,0,0,0.04)",
+  "gbc-primary-color"                    : "$mt-green-700",
+  "gbc-primary-medium-color"             : "$mt-green-500",
+  "gbc-primary-light-color"              : "$mt-green-100",
+  "gbc-secondary-color"                  : "$mt-grey-600",
+  "gbc-disabled-color"                   : "$mt-grey-400",
+  "gbc-separator-color"                  : "$mt-grey-400",
+  "gbc-header-color"                     : "$mt-grey-100",
+  "gbc-message-color"                    : "$mt-grey-800",
+  "gbc-error-color"                      : "$mt-red-800",
+  "gbc-sidebar-always-visible-min-width" : "999999px",
+  "gbc-sidebar-default-width"            : "350px",
+  "gbc-animation-duration"               : "0.200s"
+}
