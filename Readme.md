@@ -1,6 +1,6 @@
 # Genero Web Client - JavaScript theme (GWC-JS) project
 
-[![Build Status](https://travis-ci.org/Hafidzi/gws-js/framework.svg)](https://travis-ci.org/hafidzi/gws-js)
+[![Build Status](https://travis-ci.org/Hafidzi/gws-js.svg)](https://travis-ci.org/hafidzi/gws-js)
 
 ## Requirements
 
