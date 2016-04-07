@@ -5,6 +5,7 @@ node_js:
   - "4.2.1"
 
 before_install:
-  - npm install -g grunt-cli
-  - npm install -g bower
+  - npm install grunt-cli
+  - npm install bower
+  - npm install
   - grunt deps
