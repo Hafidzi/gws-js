@@ -1,7 +1,7 @@
 {
   "name": "GWC-JS",
   "version": "1.00.06",
-  "description": "Genero Web Client Javascript (GWC_JS)"
+  "description": "Genero Web Client Javascript (GWC_JS)",
   "private": true,
   "engines": {
     "node": ">= 4.2.1"
