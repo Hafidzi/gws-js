@@ -1,6 +1,7 @@
 {
   "name": "GWC-JS",
   "version": "1.00.06",
+  "description": "Genero Web Client Javascript (GWC_JS)"
   "private": true,
   "engines": {
     "node": ">= 4.2.1"
@@ -47,6 +48,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^3.10.1"
+    "lodash": "^4.8.2"
   }
 }
