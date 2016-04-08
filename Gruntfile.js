@@ -32,4 +32,7 @@ module.exports = function(grunt) {
   require("./.grunt/web/watch/watch")(grunt);
 
   grunt.registerTask("default", "Default task. Run the compilation", ["compile"]);
+  
+  // Travis CI task.
+  grunt.registerTask('travis', 'lint qunit');
 };

@@ -1,8 +1,8 @@
 {
   "compile": {
-    "mode":"cdev",
-    "customization": false,
-    "with":{
+    "mode": "cdev",
+    "customization": true,
+    "with": {
       "nwjs": false,
       "android": false,
       "ios": false
