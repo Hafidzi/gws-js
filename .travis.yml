@@ -11,3 +11,5 @@ before_install:
 install:
   - grunt deps
   - grunt
+
+ script: phantomjs test/test.js
